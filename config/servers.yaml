@@ -1,19 +1,7 @@
 servers:
   - name: web01
     host: 10.0.0.11
-    paths:
-      - /etc
-      - /var/www
-    schedule: hourly
-
-  - name: db01
-    host: 10.0.0.12
-    paths:
-      - /var/lib/mysql
-    schedule: daily
-
-  - name: logs01
-    host: 10.0.0.13
-    paths:
-      - /var/log
-    schedule: weekly
+    dynamic_paths:
+      - base_path: /root/backu/srv1
+        pattern: "srv1-c4-*-scp,f1,t0.tar"
+        schedule: daily
