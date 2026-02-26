@@ -1,7 +1,19 @@
 servers:
   - name: web01
     host: 10.0.0.11
+
     dynamic_paths:
-      - base_path: /root/backu/srv1
-        pattern: "srv1-c4-*-scp,f1,t0.tar"
+      - name: srv1-c1
+        base_path: /root/backu/srv1
+        pattern: "srv1-c1-*-scp,f1,t0.tar"
         schedule: daily
+
+      - name: srv1-c2
+        base_path: /root/backu/srv1
+        pattern: "srv1-c2-*-scp,f1,t0.tar"
+        schedule: weekly
+
+      - name: srv1-c3
+        base_path: /root/backu/srv1
+        pattern: "srv1-c3-*-scp,f1,t0.tar"
+        schedule: hourly

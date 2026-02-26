@@ -1,0 +1,8 @@
+#!/media/ahmad/07ea7bd5-248e-4f3b-9d60-a2e0a0a44a49/personal/Projects/backup-orchestrator/venv/bin/python3
+# -*- coding: utf-8 -*-
+import re
+import sys
+from dotenv.__main__ import cli
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(cli())
